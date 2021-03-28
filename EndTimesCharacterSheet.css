@@ -1,0 +1,122 @@
+input[type=text]
+{
+    width: 60%;
+}
+
+textarea {
+  resize: vertical;
+  min-height:100px;
+}
+
+select{
+  width: 60%;
+}
+
+hr
+{
+    border: 4px solid black;;
+}
+
+table, th, td 
+{
+    border: 1px solid black;
+    margin-left: 10px;
+    
+}
+
+.sheet-input-attribute
+{
+  margin-left: 10px;
+  position: relative;
+  
+}
+
+.sheet-container {
+    position: relative;   
+    width: 850px;
+    padding: 60px;
+}
+
+.sheet-background {
+    width: 100%;
+    height: 100%;
+}
+
+input.sheet-tab + span::before
+{
+    content:attr(title);
+    border: solid 1px #a8a8a8;
+    border-bottom-color: black;
+    text-align: center;
+    display: inline-block;
+    background: #fff;
+    background: -moz-linear-gradient(to top, #c8c8c8, #fff, #c8c8c8);
+    background: -webkit-linear-gradient(to top, #c8c8c8, #fff, #c8c8c8);
+    background: -ms-linear-gradient(to top, #c8c8c8, #fff, #c8c8c8);
+    background: -o-linear-gradient(to top, #c8c8c8, #fff, #c8c8c8);
+    
+    width: 150px;
+    height: 20px;
+    font-size: 18px;
+    position: absolute;
+    top: 57px;
+    left: 62px;
+}
+
+input.sheet-tab
+{
+    width: 150px;
+    height: 20px;
+    position: relative;
+    top: 0px;
+    left: 5px;
+    margin: -1.5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+}
+
+input.sheet-tab2 + span::before
+{
+    /*left: 180px;*/
+	left: 213px;
+    background: #fff;
+    background: -moz-linear-gradient(to top, #c8c8c8, #fff, #c8c8c8);
+    background: -webkit-linear-gradient(to top, #c8c8c8, #fff, #c8c8c8);
+    background: -ms-linear-gradient(to top, #c8c8c8, #fff, #c8c8c8);
+    background: -o-linear-gradient(to top, #c8c8c8, #fff, #c8c8c8);
+}
+
+input.sheet-tab:checked + span::before
+{
+    background: #fff;
+    background: -moz-linear-gradient(to top, #fcfcfc, #dcdcdc, #fcfcfc);
+    background: -webkit-linear-gradient(to top, #fcfcfc, #dcdcdc, #fcfcfc);
+    background: -ms-linear-gradient(to top, #fcfcfc, #dcdcdc, #fcfcfc);
+    background: -o-linear-gradient(to top, #fcfcfc, #dcdcdc, #fcfcfc);
+    background: linear-gradient(to top, #fcfcfc, #dcdcdc, #fcfcfc);
+    border-bottom-color: #fff;
+}
+
+.sheet-background::after {
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+    background: url('https://raw.githubusercontent.com/jhpoole/roll20-the-end-times/master/TheEndTimesBackground.png');
+    background-size: 100% 100%;
+}
+
+div.sheet-tab-content { display: none; }
+
+input.sheet-tab1:checked ~ div.sheet-tab1,
+input.sheet-tab2:checked ~ div.sheet-tab2
+
+{
+    display: block;
+}
+
