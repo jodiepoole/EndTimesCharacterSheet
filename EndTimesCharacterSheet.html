@@ -1,0 +1,299 @@
+<div class="container">
+    <div class="background">
+        <div>
+            <table style="border: 0px solid transparent">
+                <tr style="border: 0px solid transparent">
+                    <td style="border: 0px solid transparent">
+                        <br/><br/>
+                        <strong style="display:inline-block;  width:90px;">First Name</strong>
+                        <input type="text" name="attr_First_Name"  value=""><br/>
+                        <strong style="display:inline-block;  width:90px;">Family Name</strong>
+                        <input type="text" name="attr_Family_Name"  value=""><br/>
+                        <strong style="display:inline-block;  width:90px;">Race</strong>
+                        <select name="attr_Race">
+                            <option value="1">Human</option> 
+                            <option value="2">Dwarf</option> 
+                            <option value="3">Orc</option> 
+                            <option value="4">Elf</option> 
+                            <option value="5">Half-Orc</option> 
+                            <option value="6">Half-Elf</option> 
+                        </select><br/>
+                        <strong style="display:inline-block;  width:90px;">Birthplace</strong>
+                        <select name="attr_Birthplace">
+                            <option value="1">Human Country</option> 
+                            <option value="2">Dwarf Country</option> 
+                            <option value="3">Orc Country</option> 
+                            <option value="4">Elf Country</option> 
+                        </select><br/>
+                        <strong style="display:inline-block;  width:90px;">Standing</strong>
+                        <select name="attr_Standing">
+                            <option value="1">Outcast</option> 
+                            <option value="2">Middling</option> 
+                            <option value="3">Wealthy</option> 
+                        </select><br/>
+                        <strong style="display:inline-block;  width:94px;">Proffesion</strong><input type="text" name="attr_Proffesion"  value=""><br/>
+                        <strong style="display:inline-block;  width:94px;">Age</strong><input type="number" name="attr_Age"  value="0"><br/>
+                        <input hidden type="number" name="attr_Human_Boolean"  value="floor(@{Race}/1)*floor(1/@{Race})" disabled>
+                        <input hidden type="number" name="attr_Dwarf_Boolean"  value="floor(@{Race}/2)*floor(2/@{Race})" disabled>
+                        <input hidden type="number" name="attr_Orc_Boolean"  value="floor(@{Race}/3)*floor(3/@{Race})" disabled>
+                        <input hidden type="number" name="attr_Elf_Boolean"  value="floor(@{Race}/4)*floor(4/@{Race})" disabled>
+                        <input hidden type="number" name="attr_HalfOrc_Boolean"  value="floor(@{Race}/5)*floor(5/@{Race})" disabled>
+                        <input hidden type="number" name="attr_HalfElf_Boolean"  value="floor(@{Race}/6)*floor(6/@{Race})" disabled>
+                    </td>
+                    <td style="width:30%; border: 0px solid transparent">
+                        <img src="https://raw.githubusercontent.com/jodiepoole/EndTimesCharacterSheet/main/Images/EndTimesIcon.png">
+                    </td>
+                    <td style="border: 0px solid transparent">
+                        <br/>
+                        <strong>LANGUAGES</strong><br/><br/>
+                        <table>
+                          <tr>
+                            <th>Language</th>
+                            <th>Speak</th>
+                            <th>Read/Write</th>
+                          </tr>
+                          <tr>
+                            <td>Mulkhatain (Human Speech)</td>
+                            <td><input type='checkbox' name='attr_SpeakHuman' /></td>
+                            <td><input type='checkbox' name='attr_ReadWriteHuman' /></td>
+                          </tr>
+                            <tr>
+                            <td>Dokaim (Dwarf Speech)</td>
+                            <td><input type='checkbox' name='attr_SpeakDwarf'/></td>
+                            <td><input type='checkbox' name='attr_ReadWriteDwarf' /></td>
+                          </tr>
+                            <tr>
+                            <td>Kurican (Orc Speech)</td>
+                            <td><input type='checkbox' name='attr_SpeakOrc'/></td>
+                            <td><input type='checkbox' name='attr_ReadWriteOrc' /></td>
+                          </tr>
+                            <tr>
+                            <td>Eogen (Elf Speech)</td>
+                            <td><input type='checkbox' name='attr_SpeakElf'/></td>
+                            <td><input type='checkbox' name='attr_ReadWriteElf' /></td>
+                          </tr>
+                            <tr>
+                            <td>Zerkath (Ancient Language)</td>
+                            <td><input type='checkbox' name='attr_SpeakAncient'/></td>
+                            <td><input type='checkbox' name='attr_ReadWriteAncient' /></td>
+                          </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <hr/>
+            
+            <div class='3colrow'>
+            
+            <div class='col'>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>ATTRIBUTES</strong><br/>
+                <br/>
+            <strong style="display:inline-block;  width:90px;">Body</strong>
+            <input type="number" name="attr_Body"  value="0" min="-5" max="5" class="sheet-input-attribute" style="display:inline;"><br/>
+            <strong style="display:inline-block;  width:90px;">Speed</strong>
+            <input type="number" name="attr_Speed"  value="0" min="-5" max="5" class="sheet-input-attribute" style="display:inline;"><br/>
+            <strong style="display:inline-block;  width:90px;">Coordination</strong>
+            <input type="number" name="attr_Coordination"  value="0" min="-5" max="5" class="sheet-input-attribute" style="display:inline;"><br/>
+            <strong style="display:inline-block;  width:90px;">Intelligence</strong>
+            <input type="number" name="attr_Intelligence"  value="0" min="-5" max="5" class="sheet-input-attribute" style="display:inline;"><br/>
+            <strong style="display:inline-block;  width:90px;">Willpower</strong>
+            <input type="number" name="attr_Willpower" value="0" min="-5" max="5" class="sheet-input-attribute" style="display:inline;"><br/>
+            <strong style="display:inline-block;  width:90px;">Charisma</strong>
+            <input type="number" name="attr_Charisma" value="0" min="-5" max="5" class="sheet-input-attribute" style="display:inline;"><br/>
+            <strong style="display:inline-block;  width:90px;">Total</strong>
+            <input type="number" name="attr_Attribute_Total" class="sheet-input-attribute" style="display:inline;" value="@{Body}+@{Speed}+@{Coordination}+@{Intelligence}+@{Willpower}+@{Charisma}" disabled><br/>
+            </div>
+            <div class='col'>
+                &nbsp;
+                <strong>CALCULATED ATTRIBUTES</strong><br/>
+                <br/>
+            <strong style="display:inline-block;  width:91px;">Health</strong>
+            <input type="number" name="attr_Health_Current" value="@{Health_Max} - @{Current_Damage}" disabled/>/<input type="number" name="attr_Health_Max" value="35+(@{Body}*2)" title="35 + (BODY * 2)"disabled/><br/>
+            <input type="number" hidden name="attr_Current_Damage">
+            <strong style="display:inline-block;  width:95px;">Unconscious</strong><input type="number" name="attr_Unconscious" value="6 - (ceil(@{Body} / 2))" title="6 - (BODY / 2 (Rounded Up))" disabled/><br/>
+            <strong style="display:inline-block;  width:95px;">Wound Thresh.</strong><input type="number" name="attr_Wound_Threshold" value="floor(abs(@{Health_Max})/2)" title="Health / 2 (Rounded Down)" disabled/><br/>
+            <strong style="display:inline-block;  width:95px;">Movement</strong><input type="number" name="attr_Movement" value="6+(floor((@{Speed}+@{Coordination})/2))" title="6 + (SPEED + COORDINATION / 2 (Rounded Down))"disabled/><br/>
+            <strong style="display:inline-block;  width:95px;">Reaction</strong><input type="number" name="attr_Reaction" value="@{Speed}+@{Intelligence}" title="SPEED + INTELLIGENCE"disabled/><button type='roll' value='@{First_Name} rolls Reaction: [[1d20 + @{Reaction}]]' name='roll_ReactionCheck'></button><br/>
+            <strong style="display:inline-block;  width:95px;">Defence</strong><input type="number" name="attr_Defence" value="10+@{Speed}+(floor(@{Skirmish}/2))" title = "10 + SPEED + (Skirmish / 2 (Rounded Down))"disabled/><br/>
+            </div>
+            <div class='col'>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>WOUNDS</strong><br/>
+                <br/>
+            <fieldset class="repeating_Wounds"> 
+            <strong style="display:inline-block;  width:60px;">Damage</strong><input type="number" name="attr_Damage_Taken" value="0" min="0" class="sheet-input-wound"><strong>&nbsp;Crit?&nbsp;</strong><input type='checkbox' name='attr_WoundCrit'/><br/><strong style="display:inline-block;  width:60px;">Injury</strong><input type='text' name='attr_WoundCritInjury'/><br/><br/>
+            <script type="text/worker">
+            on("change:repeating_Wounds:Damage_Taken remove:repeating_Wounds", function() {
+            	getSectionIDs("repeating_Wounds", function(IDArray) {
+            		var fieldNames = [];
+                    for (var i=0; i < IDArray.length; i++) {
+            			fieldNames.push("repeating_Wounds_" + IDArray[i] + "_Damage_Taken");
+            		}
+            		
+                    var total = 0;
+                    getAttrs(fieldNames, function(values) {
+            			for (var i=0; i < IDArray.length; i++) {
+            				total += parseInt(values["repeating_Wounds_" + IDArray[i] + "_Damage_Taken"])||0;
+            			}
+            			setAttrs({
+            				"Current_Damage": total
+            			});
+                    });
+            	});
+            });
+            </script>
+            </fieldset>
+            </div>
+            </div>
+            <hr/>
+            
+            <div class='2colrow'>
+            <div class='col'>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>TRAITS</strong><br/><br/>
+                <fieldset class="repeating_Trait">
+                    <strong style="display:inline-block;  width:90px;">Trait</strong><input type='text' name='attr_Trait_Name'/><br/>
+                </fieldset>     
+            </div>
+            
+            <div class='col'>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>CHECKS</strong>
+                 <br/><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>Mod</strong><br/>
+            <strong style="display:inline-block;  width:90px;">Physical</strong><input type='number' name='attr_PhysicalCheckMod' value='0'/><button type='roll' value='@{First_Name} rolls a Physical Check [[1d20 + @{Body} + @{PhysicalCheckMod}]]' name='roll_PhysicalCheck' title="d20 + Body + Modifier"></button><br/>
+            
+            
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>Mod</strong><br/>
+            <strong style="display:inline-block;  width:90px;">Mental</strong><input type='number' name='attr_MentalCheckMod' value='0'/><button type='roll' value='@{First_Name} rolls a Mental Check [[1d20 + @{Willpower} + @{MentalCheckMod}]]' name='roll_MentalCheck' title="d20 + Willpower + Modifier"></button><br/>
+            
+            
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>Mod</strong><br/>
+            <strong style="display:inline-block;  width:90px;">Luck</strong><input type='number' name='attr_LuckCheckMod' value='0'/><button type='roll' value='@{First_Name} rolls a Luck Check [[1d20 + @{LuckCheckMod}]]' name='roll_LuckCheck' title="d20 + Modifier"></button><br/>
+            
+            </div>
+            </div>
+            <hr/>
+            
+            <div class='3colrow'>
+            <div class='col'>
+                <br/>
+                <br/>
+            <strong style="display:inline-block;  width:90px;">Archery</strong><input type="number" name="attr_Archery"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Archery [[1d20 + @{Coordination} + @{Archery}]]' name='roll_ArcheryCheck' title="d20 + Coordination + Archery"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Athletics</strong><input type="number" name="attr_Athletics"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Athletics [[1d20 + @{Speed} + @{Athletics}]]' name='roll_AthleticsCheck'  title="d20 + Speed + Athletics"></button><br/>  
+            <strong style="display:inline-block;  width:90px;">Awareness</strong><input type="number" name="attr_Awareness"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Awareness [[1d20 + @{Willpower} + @{Awareness}]]' name='roll_AwarenessCheck'  title="d20 + Willpower + Awareness"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Cleaving</strong><input type="number" name="attr_Cleaving"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Cleaving [[1d20 + @{Coordination} + @{Cleaving}]]' name='roll_CleavingCheck'  title="d20 + Coordination + Cleaving"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Crossbows</strong><input type="number" name="attr_Crossbows"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Crossbows [[1d20 + @{Coordination} + @{Crossbows}]]' name='roll_CrossbowsCheck'  title="d20 + Coordination + Crossbows"></button><br/>
+            <strong style="display:inline-block;  width:90px;">First Aid</strong><input type="number" name="attr_First_Aid"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls First Aid [[1d20 + @{Intelligence} + @{First_Aid}]]' name='roll_First_AidCheck' title="d20 + Intelligence + First Aid"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Folklore</strong><input type="number" name="attr_Folklore"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Folklore [[1d20 + @{Intelligence} + @{Folklore}]]' name='roll_FolkloreCheck'  title="d20 + Intelligence + Folklore"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Horsemanship</strong><input type="number" name="attr_Horsemanship"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Horsemanship [[1d20 + @{Coordination} + @{Horsemanship}]]' name='roll_HorsemanshipCheck' title="d20 + Coordination + Horsemanship"></button><br/>
+            </div>
+            <div class='col'>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>SKILLS</strong><br/>
+                <br/>
+            <strong style="display:inline-block;  width:90px;">Hunting</strong><input type="number" name="attr_Hunting"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Hunting [[1d20 + @{Intelligence} + @{Hunting}]]' name='roll_HuntingCheck' title="d20 + Intelligence + Hunting"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Intimidate</strong><input type="number" name="attr_Intimidate"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Intimidate [[1d20 + @{Charisma} + @{Intimidate}]]' name='roll_IntimidateCheck' title="d20 + Charisma + Intimidate"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Intrigue</strong><input type="number" name="attr_Intrigue"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Intrigue [[1d20 + @{Charisma} + @{Intrigue}]]' name='roll_IntrigueCheck' title="d20 + Charisma + Intrigue"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Knowledge</strong><input type="number" name="attr_Knowledge"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Knowledge [[1d20 + @{Intelligence} + @{Knowledge}]]' name='roll_KnowledgeCheck' title="d20 + Intelligence + Knowledge"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Labour</strong><input type="number" name="attr_Labour"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Labour [[1d20 + @{Body} + @{Labour}]]' name='roll_LabourCheck' title="d20 + Body + Labour"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Language</strong><input type="number" name="attr_Language"  value="1" min="1" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Language [[1d20 + @{Intelligence} + @{Language}]]' name='roll_LanguageCheck' title="d20 + Intelligence + Language"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Orate</strong><input type="number" name="attr_Orate"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Orate [[1d20 + @{Charisma} + @{Orate}]]' name='roll_IntrigueCheck' title="d20 + Charisma + Orate"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Persuasion</strong><input type="number" name="attr_Persuasion"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Persuasion [[1d20 + @{Charisma} + @{Persuasion}]]' name='roll_PersuasionCheck' title="d20 + Charisma + Persuasion"></button><br/>
+            </div>
+            <div class='col'>
+                <br/>
+                <br/>
+            <strong style="display:inline-block;  width:90px;">Skirmish</strong><input type="number" name="attr_Skirmish"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Skirmish [[1d20 + @{Coordination} + @{Skirmish}]]' name='roll_SkirmishCheck' title="d20 + Coordination + Skirmish"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Spear</strong><input type="number" name="attr_Spear"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Spear [[1d20 + @{Coordination} + @{Spear}]]' name='roll_SpearCheck' title="d20 + Coordination + Spear"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Stewardship</strong><input type="number" name="attr_Stewardship"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Stewardship [[1d20 + @{Intelligence} + @{Stewardship}]]' name='roll_StewardshipCheck' title="d20 + Intelligence + Stewardship"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Survival</strong><input type="number" name="attr_Survival"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Survival [[1d20 + @{Intelligence} + @{Survival}]]' name='roll_SurvivalCheck' title="d20 + Intelligence + Survival"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Sword</strong><input type="number" name="attr_Sword"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Sword [[1d20 + @{Coordination} + @{Sword}]]' name='roll_SwordCheck' title="d20 + Coordination + Sword"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Surgery</strong><input type="number" name="attr_Surgery"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Surgery [[1d20 + @{Intelligence} + @{Surgery}]]' name='roll_SurgeryCheck' title="d20 + Intelligence + Surgery"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Tactics</strong><input type="number" name="attr_Tactics"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Tactics [[1d20 + @{Intelligence} + @{Tactics}]]' name='roll_TacticsCheck' title="d20 + Intelligence + Tactics"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Unarmed</strong><input type="number" name="attr_Unarmed"  value="0" min="0" max="10" class="sheet-input-skill"><button type='roll' value='@{First_Name} rolls Unarmed [[1d20 + @{Coordination} + @{Unarmed}]]' name='roll_UnarmedCheck' title="d20 + Coordination + Unarmed"></button><br/>
+            <strong style="display:inline-block;  width:90px;">Skill Total:</strong><input type="number" name="attr_Skill_Total" value="@{Archery}+@{Athletics}+@{Awareness}+@{Cleaving}+@{Crossbows}+@{First_Aid}+@{Folklore}+@{Horsemanship}+@{Hunting}+@{Intrigue}+@{Knowledge}+@{Labour}+@{Language}+@{Orate}+@{Persuasion}+@{Intimidate}+@{Skirmish}+@{Spear}+@{Stewardship}+@{Survival}+@{Sword}+@{Surgery}+@{Tactics}+@{Unarmed}" class="sheet-input-skill" disabled><br/>
+            </div>
+            </div>
+            <br/>
+            <div class='2colrow'>
+                <div class='col'>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>LABOUR EXPERTISE</strong><br/>
+            <fieldset class="repeating_LabourExpertise">
+                <strong style="display:inline-block;  width:70px;">Expertise</strong><input type='text' name='attr_LabourExpertiseName' value=""><button type='roll' value='@{First_Name} rolls Labour Expertise @{LabourExpertiseName} [[1d20 + @{Intelligence} + @{Labour} + 2]]' name='roll_LabourExpertiseCheck'></button><br/>
+            </fieldset>
+                </div>
+                <div class='col'>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>KNOWLEDGE EXPERTISE</strong><br/>
+            <fieldset class="repeating_KnowledgeExpertise">
+                <strong style="display:inline-block;  width:70px;">Expertise</strong><input type='text' name='attr_KnowledgeExpertiseName' value=""><button type='roll' value='@{First_Name} rolls Knowledge Expertise @{KnowledgeExpertiseName} [[1d20 + @{Intelligence} + @{Knowledge} + 2]]' name='roll_KnowledgeExpertiseCheck'></button><br/>
+            </fieldset>
+                </div>
+            </div>
+            <hr/>
+            <div class='3colrow'>
+            <div class='col'>
+            <strong style="display:inline-block;  width:70px;">Silver</strong><input type='number' name='attr_WealthSilver' value='0'/><br/><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>EQUIPMENT</strong><br/>
+            <fieldset class="repeating_Equipment">
+                <strong style="display:inline-block;  width:70px;">Equipment</strong><input type='text' name='attr_EquipmentName' value=""><br/>
+                <strong style="display:inline-block;  width:70px;">Desc</strong><input type='text' name='attr_EquipmentDesc' value=""><br/>
+            </fieldset>
+            </div>
+            
+            <div class='col'>
+                <br/><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>WEAPONS</strong><br/>
+            <fieldset class="repeating_Weapons">
+                <strong style="display:inline-block;  width:60px;">Weapon</strong><input type='text' name='attr_WeaponName'><br/>
+                <strong style="display:inline-block;  width:60px;">Damage</strong><input type='number' name='attr_WeaponNoDie' value='1'><strong>D</strong><input type='number' name='attr_WeaponDieType' value='6'><strong>+</strong><input type='number' name='attr_WeaponDamageModifier' class='sheet-input-weapondamage' value='0'>
+                <button type='roll' value='@{First_Name} rolls @{WeaponName} damage [[@{WeaponNoDie}d@{WeaponDieType} + @{WeaponDamageModifier} +@{Body}]]' name='roll_DamageRoll'></button><br/>
+                <strong style="display:inline-block;  width:60px;">Tags</strong><input type='text' name='attr_WeaponTags'><br/>
+            </fieldset>
+            </div>
+            <div class='col'>
+                <br/><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>ARMOUR</strong><br/>
+                <fieldset class="repeating_Armour">
+                <strong style="display:inline-block;  width:60px;">Armour</strong><input type='text' name='attr_ArmourName'><br/>
+                <strong style="display:inline-block;  width:60px;">Value</strong><input type='number' name='attr_ArmourValue' value='0'>
+                
+                </fieldset>
+            </div>
+            
+            
+            </div>
+            <hr/>
+            <div class='2colrow'>
+            <div class='col'>
+                <strong style="display:inline-block;  width:60px;">FAMILY</strong>
+                <fieldset class="repeating_Family">
+                    <input type='text' name='attr_FamilyName' style="display:inline-block;  width:100px;"><strong style="display:inline-block;  width:60px;">Relation</strong><input type='text' name='attr_FamilyRelation' style="display:inline-block;  width:83px;"><br/>
+                    <strong style="display:inline-block;  width:60px;">Notes</strong><input type='text' name='attr_FamilyNotes'> <br/><br/>
+                    </fieldset>
+                </div>
+            <div class='col'>
+                <strong style="display:inline-block;  width:60px;">WARRIORS</strong>
+                <fieldset class="repeating_Warrior">
+                    <input type='text' name='attr_WarriorName' style="display:inline-block;  width:100px;"><strong style="display:inline-block;  width:60px;">Loyal To</strong><input type='text' name='attr_WarriorLoyalTo' style="display:inline-block;  width:83px;"><br/>
+                    <strong style="display:inline-block;  width:60px;">Notes</strong><input type='text' name='attr_WarriorNotes'><br/><br/>
+                    </fieldset>
+                </div>
+            </div>
+            <hr/>
+            <strong>NOTES</strong><br/>
+            <textarea rows="4" cols="50" name="attr_PC_Notes"></textarea>
+            <hr/>
+        
+        </div>
+    </div>
+</div>
