@@ -107,7 +107,7 @@ input.sheet-tab:checked + span::before
     right: 0;
     position: absolute;
     z-index: -1;   
-    background: url('https://raw.githubusercontent.com/jhpoole/roll20-the-end-times/master/TheEndTimesBackground.png');
+    background: url('https://raw.githubusercontent.com/jodiepoole/EndTimesCharacterSheet/main/Images/TheEndTimesBackground.png');
     background-size: 100% 100%;
 }
 
